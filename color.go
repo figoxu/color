@@ -421,11 +421,6 @@ func getCachedColor(p Attribute) *Color {
 
 func colorPrint(format string, p Attribute, a ...interface{}) {
 	c := getCachedColor(p)
-
-	if !strings.HasSuffix(format, "\n") {
-		format += "\n"
-	}
-
 	if len(a) == 0 {
 		c.Print(format)
 	} else {
